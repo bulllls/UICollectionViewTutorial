@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81603D422BCC76500D66514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81603D322BCC76500D66514 /* Assets.xcassets */; };
 		D848FD43229549CB006F7911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D848FD42229549CB006F7911 /* AppDelegate.swift */; };
-		D848FD45229549CB006F7911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D848FD44229549CB006F7911 /* ViewController.swift */; };
+		D848FD45229549CB006F7911 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D848FD44229549CB006F7911 /* GalleryViewController.swift */; };
 		D848FD48229549CB006F7911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D848FD46229549CB006F7911 /* Main.storyboard */; };
-		D848FD4A229549CE006F7911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D848FD49229549CE006F7911 /* Assets.xcassets */; };
 		D848FD4D229549CE006F7911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D848FD4B229549CE006F7911 /* LaunchScreen.storyboard */; };
+		D848FD5922954E09006F7911 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D848FD5722954E09006F7911 /* PhotoCell.swift */; };
+		D848FD5A22954E09006F7911 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D848FD5822954E09006F7911 /* PhotoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D81603D322BCC76500D66514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D848FD3F229549CB006F7911 /* CollectionViewTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D848FD42229549CB006F7911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D848FD44229549CB006F7911 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D848FD44229549CB006F7911 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D848FD47229549CB006F7911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D848FD49229549CE006F7911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D848FD4C229549CE006F7911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D848FD4E229549CE006F7911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D848FD5722954E09006F7911 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		D848FD5822954E09006F7911 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		D848FD41229549CB006F7911 /* CollectionViewTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D848FD5422954BDF006F7911 /* Common */,
 				D848FD42229549CB006F7911 /* AppDelegate.swift */,
-				D848FD44229549CB006F7911 /* ViewController.swift */,
+				D848FD44229549CB006F7911 /* GalleryViewController.swift */,
 				D848FD46229549CB006F7911 /* Main.storyboard */,
-				D848FD49229549CE006F7911 /* Assets.xcassets */,
 				D848FD4B229549CE006F7911 /* LaunchScreen.storyboard */,
+				D81603D322BCC76500D66514 /* Assets.xcassets */,
 				D848FD4E229549CE006F7911 /* Info.plist */,
 			);
 			path = CollectionViewTutorial;
+			sourceTree = "<group>";
+		};
+		D848FD5422954BDF006F7911 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D848FD5522954BE7006F7911 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D848FD5522954BE7006F7911 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D848FD5622954BF8006F7911 /* PhotoCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D848FD5622954BF8006F7911 /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				D848FD5722954E09006F7911 /* PhotoCell.swift */,
+				D848FD5822954E09006F7911 /* PhotoCell.xib */,
+			);
+			path = PhotoCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +152,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D848FD5A22954E09006F7911 /* PhotoCell.xib in Resources */,
 				D848FD4D229549CE006F7911 /* LaunchScreen.storyboard in Resources */,
-				D848FD4A229549CE006F7911 /* Assets.xcassets in Resources */,
+				D81603D422BCC76500D66514 /* Assets.xcassets in Resources */,
 				D848FD48229549CB006F7911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D848FD45229549CB006F7911 /* ViewController.swift in Sources */,
+				D848FD45229549CB006F7911 /* GalleryViewController.swift in Sources */,
+				D848FD5922954E09006F7911 /* PhotoCell.swift in Sources */,
 				D848FD43229549CB006F7911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +313,6 @@
 		D848FD52229549CE006F7911 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3JQCZ23S22;
 				INFOPLIST_FILE = CollectionViewTutorial/Info.plist;
@@ -299,7 +330,6 @@
 		D848FD53229549CE006F7911 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3JQCZ23S22;
 				INFOPLIST_FILE = CollectionViewTutorial/Info.plist;
